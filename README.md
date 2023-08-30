@@ -1,24 +1,33 @@
-# README
+## Starting the app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Build the docker image
 
-Things you may want to cover:
+```
+docker compose build
+```
 
-* Ruby version
+Start the container
 
-* System dependencies
+```
+docker compose up -d
+```
 
-* Configuration
+Create the database
 
-* Database creation
+```
+docker compose run web rake db:create
+```
 
-* Database initialization
+---
 
-* How to run the test suite
+Once these commands have been run, you can stop the Docker container with
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+docker compose down
+```
 
-* Deployment instructions
+and restart it with
 
-* ...
+```
+docker compose up -d
+```
