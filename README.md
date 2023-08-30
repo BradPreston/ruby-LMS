@@ -31,3 +31,10 @@ and restart it with
 ```
 docker compose up -d
 ```
+
+## Migrations
+
+Run the migrations
+```
+docker compose run web rake db:migrate
+```
