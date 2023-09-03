@@ -1,4 +1,4 @@
 class Loan < ApplicationRecord
   belongs_to :borrower
-  has_one :book
+  belongs_to :book
 end
