@@ -32,9 +32,14 @@ and restart it with
 docker compose up -d
 ```
 
-## Migrations
+## Migrations and Seeds
 
 Run the migrations
 ```
 docker compose run web rake db:migrate
+```
+
+Seed the database
+```
+docker compose run web rake db:seed
 ```
