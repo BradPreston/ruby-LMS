@@ -24,8 +24,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_30_122235) do
     t.integer "available_copies"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "loan_id"
-    t.index ["loan_id"], name: "index_books_on_loan_id"
   end
 
   create_table "borrowers", force: :cascade do |t|
@@ -35,8 +33,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_30_122235) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "loan_id"
-    t.index ["loan_id"], name: "index_borrowers_on_loan_id"
   end
 
   create_table "loans", force: :cascade do |t|
@@ -52,8 +48,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_30_122235) do
     t.index ["borrower_id"], name: "index_loans_on_borrower_id"
   end
 
-  add_foreign_key "books", "loans"
-  add_foreign_key "borrowers", "loans"
   add_foreign_key "loans", "books"
   add_foreign_key "loans", "borrowers"
 end
