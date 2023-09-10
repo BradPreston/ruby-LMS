@@ -3,19 +3,19 @@
 Build the docker image
 
 ```
-docker compose build
+make build
 ```
 
 Start the container
 
 ```
-docker compose up -d
+make up
 ```
 
 Create the database
 
 ```
-docker compose run web rake db:create
+make db-create
 ```
 
 ---
@@ -23,23 +23,25 @@ docker compose run web rake db:create
 Once these commands have been run, you can stop the Docker container with
 
 ```
-docker compose down
+make down
 ```
 
 and restart it with
 
 ```
-docker compose up -d
+make up
 ```
 
 ## Migrations and Seeds
 
 Run the migrations
+
 ```
-docker compose run web rake db:migrate
+make db-migrate
 ```
 
 Seed the database
+
 ```
-docker compose run web rake db:seed
+make db-seed
 ```
