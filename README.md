@@ -1,46 +1,46 @@
 ## Starting the app
 
-Build the docker image
+Build the docker image:
 
 ```
 make build
 ```
 
-Start the container
+Start the container:
 
 ```
 make up
 ```
 
-Create the database
+Create the database:
 
 ```
 make db-create
 ```
 
----
-
-Once these commands have been run, you can stop the Docker container with
-
-```
-make down
-```
-
-and restart it with
-
-```
-make up
-```
-
-## Migrations and Seeds
-
-Run the migrations
+Run the migrations:
 
 ```
 make db-migrate
 ```
 
-Seed the database
+---
+
+Once these commands have been run, you can stop the Docker container with:
+
+```
+make down
+```
+
+and restart it with:
+
+```
+make up
+```
+
+## Seeding the Database
+
+To seed the database:
 
 ```
 make db-seed
